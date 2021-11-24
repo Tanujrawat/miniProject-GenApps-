@@ -1,0 +1,84 @@
+Synopsis on “GenApps”:
+
+Submitted by:                                                              Submitted to: 
+Name               -       Tanuj rawat                                                      Akash Choudhary
+Brach                -       CSE
+Section             -        A
+Class roll no.    -        60
+University Roll -        191500847
+
+
+
+Introduction:
+GenApps says “why go to different places when you can get everything you need at one single place……. ”,
+In today’s  time a student has got so many alternatives of different useful applications that he or she needs in their daily routine but they all are scattered at different places  and searching the best ones is really hard and at the same time cumbersome too, but  to increase our productivity and work performance  we need to have the best tools so that it will make sure that our toil don’t get waste with our precious time.
+So GenApps comes with the idea of bringing everything important together, whether you need to make notes or you want to save a contact in your contact list or may be you need to check the time this project will provide you vast number of applications that you can use for your daily activities.  
+
+
+
+
+
+
+
+Existing System:
+
+There are a lot of platforms that provides you a lot of exciting applications at one single place like the best example would be PlayStore.
+
+
+But with the efficient use of technologies like Html,css, python and django  our project can be a little bit faster and little bit easy to handle too, where everyone can understand things easily and deal with them in a smooth way, without any traffic of downloading and directly loading them in your browser with one single click anywhere and anytime.
+
+
+
+
+
+
+Use of project:
+The main purpose of this project is to make student life a little bit easier so that he or she can save time and ultimately use this time for doing creative things.so based on these facts below given are some uses of this project:
+Time saver – I think you don’t need to wander here and there when you got everything important at one single place.
+Easy access –  one click in a web browser you have a very powerful tool in front of you anywhere and anytime.
+Free to use – no charges or subscription required for using these mini applications.
+
+
+
+
+
+
+
+
+
+Feasibility of Project 
+All the features of the project are feasible. It doesn’t involve any development cost or hardware or paid software. 
+The api which we are using for the project is also free version. 
+Internet connection is required while accessing the website. 
+The only disadvantage of this platform is that we are only limited to certain storage because of lack of database and more application will be added  but it will take some time.
+
+
+
+
+Functional Specification
+• Register a new user and login : User can register using email. Firebase is used as a database.
+• easy manipulation of  different applications at the same time
+•use of simple api’s for creating some application provided in the project which is basically nothing but fetching data from api. 
+
+
+
+
+Software Specification 
+
+• Technology implemented : python, Firebase,HTML,CSS 
+• framework : django
+• Development environment : Visual Studio Code
+ • Web browser : Chrome/Brave
+
+Hardware Requirements 
+
+• Processor : i3 and above 
+• Operating System : Windows 7(minimum) 
+• RAM : 4 GB and above
+
+
+
+FUTURE SCOPE 
+With apps developing at a very fast pace, this will directly increase the scope of this project. As more useful application we create and use them,  more it becomes important for us to keep it at a place where it is reachable to everyone and with features of “anytime” and “anywhere.”
+Github Link: 
+https://tanujrawat.github.io/miniProject-GenApps-/
