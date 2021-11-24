@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(5, 5, 49);
+}
+.navbar{
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color:teal;
+}
+.ctn
+{
+    padding: 8px  20px;
+    background-color:rgb(5, 5, 49);
+    border-radius: 50px;
+}
+a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+}
+.navbar ul
+{
+    flex:1;
+    text-align: right;
+}
+.navbar ul li{
+    display: inline-block;
+    margin:0 30px;
+}
+.logo
+{
+    font-size: 30px;
+    color: whitesmoke;
+}
+.mobile-list
+{
+    display: none;
+}
+.apps i
+{
+    display: flex;
+    margin-left: 35px;
+    margin-top: 55px;
+    font-size:50px;
+}
+.apps .fa-music
+{
+    color: blue;
+}ment
+.apps .fa-gamepad
+{
+    color: red;
+}
+.apps .fa-book-reader
+{
+    color: cadetblue;
+}
+.apps .fa-list
+{
+    color: brown;
+}
+section span
+{
+    font-size: 30px;
+    margin-left: 25px;
+    color: white;
+}
+#sidepic
+{
+    position: absolute;
+    top: 80px;
+    left: 730px;
+}
+#sidepic img
+{
+    width: 600px;
+    height: 550px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width:800px)
+{
+    .navbar .desktop-list
+    {
+        display: none;
+    }
+    #sidepic
+    {
+        display: none;
+    }
+    #apps i
+    {
+        display: none;
+    }
+    section
+    {
+        display: none;
+    }
+    .mobile-list
+    {
+        display: block;
+        color: whitesmoke;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        background-color:teal;
+    }
+    .mobile-list i
+    {
+        font-size: 7px;
+        cursor: pointer;
+        margin-left: -10px;
+    }
+    .mobile-list li:hover i
+    {
+        color: rgb(5, 5, 49);
+    }
+}

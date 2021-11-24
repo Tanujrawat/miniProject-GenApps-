@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./custompdf.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PDF viewer</title>
+</head>
+<body>
+    <div class="top-bar">
+      <button class="btn" id="prev-page">
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Prev Page
+      </button>
+      <button class="btn" id="next-page">
+        Next Page <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+      </button>
+      <span class="page-info">
+        Page <span id="page-num"></span> of <span id="page-count"></span>
+      </span>
+    </div>
+
+    <canvas id="pdf-render"></canvas>
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="./custompdf.js"></script>
+  </body>
+</html>

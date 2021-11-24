@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+
+*{
+	margin:0;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to top, #85C1E9, #AED6F1);
+}
+.todo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 25px;
+}
+.main{
+	height: 550px;
+	width: 380px;
+	background: #FBFCFC;
+	border-radius: 15px;
+	padding: 10px 0 0 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+#daily_task{
+	font-family: 'Sansita Swashed', cursive;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	color: #52BE80;
+}
+#daily_task i{
+	font-size: 20px;
+	margin-left: 7px;
+}
+.addtask{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+}
+form{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	height: 100%;
+}
+input[type=text]{
+	width: 100%;
+	height: 70%;
+	padding: 2px 0 2px 20px;
+	outline: none;
+	border-radius: 10px;
+	font-size: 18px;
+	border: none;
+	transition: all 0.3s;
+	box-shadow: 0.1px 4px 10px 2px rgba(0,0,0,0.15);
+}
+.button{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	height: 40px;
+	width: 40px;
+	background: linear-gradient(to top, #3498DB, #85C1E9);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+.button a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+}
+input[type=text]:focus{
+	transform: translateY(-5px);
+	border: none;
+	box-shadow: 0.1px 4px 20px 2px rgba(0,0,0,0.3);
+}
+input[type=text]:focus + .button{
+	background: #EC7063;
+	top: 40%;
+	box-shadow: 0.1px 4px 8px 2px rgba(0,0,0,0.1);
+}
+input[type=checkbox]{
+	display: none;
+}
+.list{
+	padding: 0;
+	margin:0;
+	height: 400px;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow: scroll;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+li{
+	position: relative;
+	width: 95%;
+	list-style: none;
+	padding: 10px 0 10px 20px;
+	border-radius: 15px;
+	box-shadow: 0.1px 4px 8px 2px rgba(0,0,0,0.05);
+}
+li:not(:first-child){
+	margin-top: 12px;
+}
+li label{
+	margin-left: 50px;
+}
+li input[type=checkbox]:checked + label{
+	text-decoration: line-through;
+	color: #ccc;
+}
+span.check{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	box-shadow: 0.1px 4px 8px 2px rgba(0,0,0,0.2);
+}
+li input[type=checkbox]:checked + label span.check::before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: url("https://png.pngtree.com/png-vector/20190303/ourlarge/pngtree-checklist-tick-badge-icon-design-template-vector-png-image_770917.jpg");
+	background-position: center;
+	background-size: 60px 60px;
+	border-radius: 50%;
+}
+.delete{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+}
+.delete::before{
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-image: url("https://img.icons8.com/flat_round/64/000000/delete-sign.png");
+	background-size: 21px 21px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	opacity: 0;
+	transition: 0.3s;
+}
+li input[type=checkbox]:checked ~ .delete::before{
+   opacity: 1;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--created by Dev ideas -->
+	<title>To-do list</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./todocss.css">
+</head>
+<body>
+
+ <div class="todo">
+ 	<div class="main">
+ 		<label id="daily_task">daily task <i class="fa fa-book" aria-hidden="true"></i></label>
+ 		<ul class="list">
+ 			<!--- li or task -->
+ 			<li>
+ 				<input type="checkbox" id="todo_1">
+ 				<label for="todo_1">
+ 					<span class="check"></span>
+ 					Add task
+ 				</label>
+ 				<label class="delete"></label>
+ 			</li>
+
+ 			<li>
+ 				<input type="checkbox" id="todo_2">
+ 				<label for="todo_2">
+ 					<span class="check"></span>
+ 					Daily routine
+ 				</label>
+ 				<label class="delete"></label>
+ 			</li>
+
+ 			<li>
+ 				<input type="checkbox" id="todo_3">
+ 				<label for="todo_3">
+ 					<span class="check"></span>
+ 					subscribe now
+ 				</label>
+ 				<label class="delete"></label>
+ 			</li>
+ 		</ul>
+        
+        <!--- input portion for adding task -->
+ 		<div class="addtask">
+ 			<form class="addform">
+ 				<input type="text" name="addtask" placeholder="Add task">
+ 				<div class="button">
+ 					<a href="#" class="add"><i class="fa fa-plus" aria-hidden="true"></i></a>
+ 				</div>
+ 			</form>
+ 		</div>
+ 	</div>
+ </div>
+
+    <script type="text/javascript">
+ 	
+        //create a selector.
+        const Form = document.querySelector(".addform");
+        const submitbutton = document.querySelector(".add");
+        const list = document.querySelector(".list");
+        const all_li = document.querySelectorAll(".list li");
+            
+        const lang = navigator.language;
+       
+        let date= new Date();
+       
+        let dayName = date.toLocaleString(lang, {
+           weekday: "long"
+        });
+       
+       //Get total number of li in the list.
+        var total_li = all_li.length;
+       
+       //create new li or todo list.
+        const generatetemplate = (todo) => {
+            const html = `<li>
+                             <input type="checkbox" id="todo_${total_li}">
+                             <label for="todo_${total_li}">
+                             <span class="check"></span>
+                              ${todo}
+                             </label>
+                             <label class="delete"></label>
+                          </li>`;
+                          list.innerHTML += html;
+        };
+       
+       //Get Input value & also Adding one by one number on the li ID.
+        function addTodos(e) {
+            e.preventDefault();
+            const todo =Form.addtask.value.trim();
+            if (todo.length){
+                total_li = total_li + 1;
+                generatetemplate(todo);
+                Form.reset();
+            }else{
+                alert("first type any task");
+            }
+        }
+       
+       //create a click event.
+        Form.addEventListener("submit", addTodos);
+        submitbutton.addEventListener("click", addTodos);
+       
+       
+       //delete todo list.
+       function deletelist(e){
+           if(e.target.classList.contains("delete")){
+               e.target.parentElement.remove();
+           }
+       }
+       //create a click event.
+       list.addEventListener("click" , deletelist);
+       
+        </script>
+
+</body>
+</html>
