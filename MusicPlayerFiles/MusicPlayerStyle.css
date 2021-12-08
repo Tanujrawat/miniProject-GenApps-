@@ -9,6 +9,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background:url('https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg');
 }
 .main{
 	position: relative;
@@ -202,4 +203,21 @@ input[type="range"]::-webkit-slider-thumb{
 }
 .right .show_song_no p:nth-child(2){
 	margin: 0 5px;
+}
+@media only screen and (max-width:1300px)
+{
+	.right .show_song_no{
+		display: none;
+	  }
+	.right #artist{
+		display: none;
+	}
+	
+	.left img{
+		display: none;
+	}	
+	.right i:before{
+		color: #fff;
+		font-size: 10px;
+	}
 }

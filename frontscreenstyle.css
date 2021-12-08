@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:rgb(5, 5, 49);
+  background: url('https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg');
 }
 .navbar{
     padding: 10px 20px;
@@ -53,7 +53,7 @@ a
 .apps .fa-music
 {
     color: blue;
-}ment
+}
 .apps .fa-gamepad
 {
     color: red;
@@ -66,11 +66,16 @@ a
 {
     color: brown;
 }
+.apps .fa-clock
+{
+    color: goldenrod;
+}
+
 section span
 {
     font-size: 30px;
     margin-left: 25px;
-    color: white;
+    color: rgb(32, 30, 30);
 }
 #sidepic
 {
@@ -85,8 +90,9 @@ section span
     border-radius: 20px;
 }
 
-@media only screen and (max-width:800px)
+@media only screen and (max-width:1300px)
 {
+
     .navbar .desktop-list
     {
         display: none;
@@ -95,15 +101,21 @@ section span
     {
         display: none;
     }
-    #apps i
+    
+    .apps i
     {
-        display: none;
+        display: block;
+        margin-left: 35px;
+        margin-top: 25px;
+        font-size:50px;
     }
-    section
+    section span
     {
-        display: none;
+        font-size: 20px;
+        margin-left: 25px;
+        color: white;
     }
-    .mobile-list
+    /* .mobile-list
     {
         display: block;
         color: whitesmoke;
@@ -126,5 +138,6 @@ section span
     .mobile-list li:hover i
     {
         color: rgb(5, 5, 49);
-    }
+    } */
+
 }
